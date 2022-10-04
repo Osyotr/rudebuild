@@ -9,13 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RudeBuild", "src\RudeBuild\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RudeBuildWixSetup", "src\RudeBuildWixSetup\RudeBuildWixSetup.csproj", "{4F48D3BB-92FE-4935-A268-EF01CFD4D01B}"
 	ProjectSection(ProjectDependencies) = postProject
-		{725D4418-B658-489E-BE5B-CA0F147A0496} = {725D4418-B658-489E-BE5B-CA0F147A0496}
 		{7DC0315A-DBD6-4790-94EC-4526A8B9300B} = {7DC0315A-DBD6-4790-94EC-4526A8B9300B}
 		{344A8E8A-9F1B-45F8-B03D-03CE5534572D} = {344A8E8A-9F1B-45F8-B03D-03CE5534572D}
 		{A52B19D3-B14D-420E-A523-B70F43632E07} = {A52B19D3-B14D-420E-A523-B70F43632E07}
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RudeBuildVSShared", "src\RudeBuildVSShared\RudeBuildVSShared.csproj", "{725D4418-B658-489E-BE5B-CA0F147A0496}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RudeBuildVSIX", "src\RudeBuildVSIX\RudeBuildVSIX.csproj", "{A52B19D3-B14D-420E-A523-B70F43632E07}"
 EndProject
@@ -25,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{21BFCDD6
 		LICENSE.txt = LICENSE.txt
 		README.txt = README.txt
 	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RudeBuildVSIXShared", "src\RudeBuildVSIXShared\RudeBuildVSIXShared.shproj", "{B6A5AE40-1586-4863-9B3F-58137AC23B94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +43,6 @@ Global
 		{4F48D3BB-92FE-4935-A268-EF01CFD4D01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F48D3BB-92FE-4935-A268-EF01CFD4D01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F48D3BB-92FE-4935-A268-EF01CFD4D01B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{725D4418-B658-489E-BE5B-CA0F147A0496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{725D4418-B658-489E-BE5B-CA0F147A0496}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{725D4418-B658-489E-BE5B-CA0F147A0496}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{725D4418-B658-489E-BE5B-CA0F147A0496}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A52B19D3-B14D-420E-A523-B70F43632E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A52B19D3-B14D-420E-A523-B70F43632E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A52B19D3-B14D-420E-A523-B70F43632E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,5 +53,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {140AC276-549C-4F06-92B1-C48088E8405E}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\RudeBuildVSIXShared\RudeBuildVSIXShared.projitems*{a52b19d3-b14d-420e-a523-b70f43632e07}*SharedItemsImports = 4
+		src\RudeBuildVSIXShared\RudeBuildVSIXShared.projitems*{b6a5ae40-1586-4863-9b3f-58137ac23b94}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

@@ -12,7 +12,7 @@ class Script
     {
         var customActionInstall = new ManagedAction(CustomActions.OnInstall, Return.ignore, When.After, Step.InstallFinalize, Condition.NOT_Installed, Sequence.InstallExecuteSequence);
         var customActionUninstall = new ManagedAction(CustomActions.OnUninstall, Return.ignore, When.Before, Step.RemoveFiles, Condition.Installed, Sequence.InstallExecuteSequence);
-        customActionInstall.RefAssemblies = customActionUninstall.RefAssemblies = new string[] { "CommandLineParser.dll", "RudeBuild.dll", "RudeBuildVSShared.dll" };
+        customActionInstall.RefAssemblies = customActionUninstall.RefAssemblies = new string[] { "CommandLineParser.dll", "RudeBuild.dll" };
 
         var project = new Project()
         {
@@ -40,7 +40,6 @@ class Script
                     {
                         new File(@"CommandLineParser.dll"),
                         new File(@"RudeBuild.dll"),
-                        new File(@"RudeBuildVSShared.dll"),
                         new File(@"RudeBuildConsole.exe"),
                         new File(@"RudeBuildVSIX.vsix"),
                         new File(@"LICENSE.rtf"),

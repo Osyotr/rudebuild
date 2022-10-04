@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b6a5ae40-1586-4863-9b3f-58137ac23b94</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>RudeBuildVSIXShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Builder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BytesToKiloBytesConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandRegistry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\AboutCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\BuildCommandBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\BuildProjectCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\BuildSolutionCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CleanCacheCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\GlobalSettingsCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\SolutionSettingsCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\StopBuildCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumDisplayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalSettingsDialog.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OutputPane.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RudeBuildPackage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SolutionSettingsDialog.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WPFHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)GlobalSettingsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SolutionSettingsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Editing-Collapse-icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Editing-Expand-icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Filter-icon.png" />
+  </ItemGroup>
+</Project>
