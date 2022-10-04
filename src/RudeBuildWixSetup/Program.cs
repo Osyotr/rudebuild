@@ -95,7 +95,7 @@ The command line version of RudeBuild is useful for automated builds, for exampl
         //project.MajorUpgrade.IgnoreRemoveFailure = true;
         //project.MajorUpgrade.Schedule = UpgradeSchedule.afterInstallInitialize;
 
-        project.SetNetFxPrerequisite(Condition.Net471_Installed, "Please install .NET Framework 4.7.1 first");
+        project.SetNetFxPrerequisite(Condition.Net48_Installed, "Please install .NET Framework 4.8 first");
 
         // We're writing the target executable of this setup project into ..\..\bin\Release or Debug.
         // That's also where all the other .dll files that need to be packaged into the installer are located,
